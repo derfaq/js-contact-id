@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema Contact‑ID</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    #log { width: 100%; height: 200px; }
+    .controls { margin-bottom: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Sistema de Comunicación Contact‑ID</h1>
+  
+  <div class="controls">
+    <!-- Botón para reanudar el AudioContext -->
+    <button id="startButton">Iniciar Audio</button>
+    
+    <h2>Transmisión de Señal de Emergencia</h2>
+    <label for="account">Número de Cuenta:</label>
+    <input type="text" id="account" value="1234">
+    <br>
+    <label for="dialed">Número Discado:</label>
+    <input type="text" id="dialed" value="015">
+    <br>
+    <label for="zone">Número de Zona:</label>
+    <input type="text" id="zone" value="15">
+    <br>
+    <button id="btnMedica">Enviar Emergencia Médica</button>
+    <button id="btnPolicial">Enviar Emergencia Policial</button>
+  </div>
+  
+  <div>
+    <h2>Consola / Log</h2>
+    <textarea id="log" readonly></textarea>
+  </div>
+  
+  <!-- Incluye la librería para detección DTMF si la necesitas (por ejemplo, "js-dtmf") -->
+  <script src="https://cdn.jsdelivr.net/npm/js-dtmf/dist/dtmf.min.js"></script>
+  
+  <!-- Tu script personalizado -->
+  <script src="script.js"></script>
+</body>
+</html>
